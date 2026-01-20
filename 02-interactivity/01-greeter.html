@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeter</title>
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script src="babel.min.js"></script>
+    <script type="text/babel">
+        function Greeter(){
+            const onBtnGreetClick = () => {
+                console.log('Greet button clicked')
+            }
+            return (
+                <div>
+                    <label htmlFor="">User Name:</label>
+                    <input type="text" name="" id=""/>
+                    <button onClick={onBtnGreetClick}>Greet</button>
+                    <div>[default message]</div>
+                </div>
+            )
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'))
+        root.render(
+            <Greeter/>
+        );
+    </script>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+</body>
+</html>
