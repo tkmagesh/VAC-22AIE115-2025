@@ -9,15 +9,23 @@
     <script src="babel.min.js"></script>
     <script type="text/babel">
         function Greeter(){
+            const [msg,setMsg] = React.useState('---')
+            const [userName, setUserName] = React.useState('')
+
             const onBtnGreetClick = () => {
-                console.log('Greet button clicked')
+                setMsg(`Hi ${userName}, Have a nice day!`)
             }
+
+            const onUserNameChange = (e) => {
+                setUserName(e.target.value);
+            }
+
             return (
                 <div>
                     <label htmlFor="">User Name:</label>
-                    <input type="text" name="" id=""/>
+                    <input type="text" onChange={onUserNameChange}/>
                     <button onClick={onBtnGreetClick}>Greet</button>
-                    <div>[default message]</div>
+                    <div>{msg}</div>
                 </div>
             )
         }
