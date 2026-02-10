@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <script src="babel.min.js"></script>
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script type="text/babel">
+        const Products = () => {
+            const heading = (<h1>Products List</h1>)
+            /*
+            const productsList = [
+                (<li>Pen</li>),
+                (<li>Pencil</li>),
+                (<li>Marker</li>),
+                (<li>Scribble Pad</li>)
+            ]
+            */
+            const products = ['Pen', 'Pencil', 'Marker', 'Notepad']
+            /*
+            const productsList = []
+            for(let i=0; i<products.length;i++){
+                const product = products[i]
+                productsList.push(<li>{product}</li>)
+            }
+            */
+            const productsList = products.map(product => (<li>{product}</li>))
+            return(
+                <div>
+                    {heading}
+                    <hr/>
+                    <label htmlFor="">Product Name:</label>
+                    <input type="text" name="" id=""/>
+                    <button>Add New</button>
+                    <ul>
+                        {productsList}
+                    </ul>
+                </div>
+            )
+        }
+        const root = ReactDOM.createRoot(document.getElementById("root"))
+        root.render(<Products/>)
+    </script>
+</head>
+<body>
+    <div id="root">
+        
+    </div>
+</body>
+</html>
