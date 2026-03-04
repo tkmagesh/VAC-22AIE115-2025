@@ -18,7 +18,7 @@
                 (<li>Scribble Pad</li>)
             ]
             */
-            const products = ['Pen', 'Pencil', 'Marker', 'Notepad']
+            const [products,setProducts] = React.useState(['Pen', 'Pencil', 'Marker', 'Notepad'])
             /*
             const productsList = []
             for(let i=0; i<products.length;i++){
@@ -26,14 +26,19 @@
                 productsList.push(<li>{product}</li>)
             }
             */
-            const productsList = products.map(product => (<li>{product}</li>))
+            const [newProductName,setNewProductName] = React.useState('')
+            const productsList = products.map(function(product) { return (<li>{product}</li>)})
+            const onBtnAddNewClick = () => {
+                let newProducts = [...products, newProductName]
+                setProducts(newProducts)
+            }
             return(
                 <div>
                     {heading}
                     <hr/>
                     <label htmlFor="">Product Name:</label>
-                    <input type="text" name="" id=""/>
-                    <button>Add New</button>
+                    <input type="text" onChange={ evt => setNewProductName(evt.target.value)}/>
+                    <button onClick={onBtnAddNewClick}>Add New</button>
                     <ul>
                         {productsList}
                     </ul>

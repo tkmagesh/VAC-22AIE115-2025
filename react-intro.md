@@ -17,3 +17,8 @@
 |Open tags without corresponding close tags are valid | Every open tag MUST have corresponding close tag |
 |"for" attribute is valid | Use "htmlFor" instead of "for"|
 |"class" attribute is valid | use "className" instead of "class"|
+
+### React Component
+- A javascript function whose name starts with Uppercase
+    ex: Greeter, Product, Products
+- The component function should return one root JSX element
