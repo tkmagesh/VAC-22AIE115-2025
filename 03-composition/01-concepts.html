@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Composition</title>
+    <script src="babel.min.js"></script>
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script type="text/babel">
+
+        
+
+        function Header(){
+            return (
+                <div>
+                    <h1>My App</h1>
+                </div>
+            )
+        }
+
+        function Content(){
+            return (
+                <div>
+                    <p>Ad velit dolore ex pariatur laboris laborum irure veniam nostrud laboris qui ullamco consequat. Ullamco do ex qui nostrud quis ut ipsum. Aliquip amet labore consectetur adipisicing id nulla elit aliquip aute dolor ea.</p>
+                    <p>Do cupidatat cupidatat laborum occaecat. Officia sunt nisi adipisicing pariatur sunt excepteur eu laboris. Eu ut veniam occaecat id dolor id culpa laboris commodo in. Quis nisi fugiat id est pariatur Lorem id cupidatat velit consequat. Aute et sint eiusmod do Lorem incididunt ut sit et exercitation deserunt culpa duis. In nisi non excepteur id aliquip amet. Dolore Lorem ea aliqua Lorem.</p>
+                    <p>Nostrud cillum eu et id commodo voluptate id incididunt ut nisi ut cupidatat quis. Cupidatat pariatur culpa eu ullamco commodo voluptate velit qui amet. Mollit sit voluptate consectetur elit est minim ad eu proident amet. Quis eiusmod non aliquip incididunt. Fugiat dolore minim incididunt in quis aute.</p>
+                </div>
+                )
+        }
+
+        function MyApp(){
+            return(
+                <div>
+                    <Header/>
+                    <Content/>
+                </div>
+            )
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<MyApp/>)
+    </script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
