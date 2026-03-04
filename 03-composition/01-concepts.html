@@ -11,10 +11,10 @@
 
         
 
-        function Header(){
+        function Header(props){
             return (
                 <div>
-                    <h1>My App</h1>
+                    <h1>{props.title}</h1>
                 </div>
             )
         }
@@ -32,7 +32,7 @@
         function MyApp(){
             return(
                 <div>
-                    <Header/>
+                    <Header title="Outlook"/>
                     <Content/>
                 </div>
             )

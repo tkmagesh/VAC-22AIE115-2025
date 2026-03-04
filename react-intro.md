@@ -22,3 +22,6 @@
 - A javascript function whose name starts with Uppercase
     ex: Greeter, Product, Products
 - The component function should return one root JSX element
+
+### Props
+Props are how the data is passed from the parent component to the child component
