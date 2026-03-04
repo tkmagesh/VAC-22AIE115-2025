@@ -25,3 +25,26 @@
 
 ### Props
 Props are how the data is passed from the parent component to the child component
+
+
+## Using Vite
+### Create a react application
+```shell
+npm create vite my-app -- --template react
+```
+
+### Setup
+```shell
+cd my-app
+npm install
+```
+
+### Run the application
+```shell
+npm run dev
+```
+
+### Create a build
+```shell
+npm run build
+```
